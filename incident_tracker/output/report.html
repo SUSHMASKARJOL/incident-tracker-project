@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>IT Incident Auto-Triage Report</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; color: #17202a; background: #f4f7f9; }
+    header { background: #143642; color: white; padding: 28px 34px; }
+    main { padding: 28px 34px; }
+    h1, h2 { margin-top: 0; }
+    .summary { display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 16px; margin: 20px 0; }
+    .summary div, .panel { background: white; border: 1px solid #d6dee5; border-radius: 8px; padding: 14px 16px; }
+    .summary strong { font-size: 28px; display: block; margin-top: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+    ul { padding-left: 20px; margin-bottom: 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    th, td { border: 1px solid #d1d5db; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #1d4e5f; color: white; }
+    tr:nth-child(even) { background: #f8fafc; }
+    tr:nth-child(odd) { background: white; }
+    .critical { color: #b91c1c; font-weight: bold; }
+    .high { color: #c2410c; font-weight: bold; }
+    .medium { color: #a16207; font-weight: bold; }
+    .low { color: #047857; font-weight: bold; }
+    code { background: #eef2ff; padding: 2px 4px; border-radius: 4px; }
+    @media (max-width: 900px) { .summary, .grid { grid-template-columns: 1fr; } table { font-size: 13px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IT Incident Auto-Triage Report</h1>
+    <p>Generated after classification, mock ticket creation, and tracker updates.</p>
+  </header>
+  <main>
+    <section class="summary">
+      <div>Total incidents<strong>12</strong></div>
+      <div>Critical incidents<strong>3</strong></div>
+      <div>Teams involved<strong>3</strong></div>
+    </section>
+    <section class="grid">
+      <div class="panel"><h2>By Team</h2><ul><li><strong>Application Support</strong>: 4</li><li><strong>Network Operations</strong>: 4</li><li><strong>Security Operations</strong>: 4</li></ul></div>
+      <div class="panel"><h2>By Severity</h2><ul><li><strong>critical</strong>: 3</li><li><strong>high</strong>: 3</li><li><strong>low</strong>: 2</li><li><strong>medium</strong>: 4</li></ul></div>
+      <div class="panel"><h2>By Type</h2><ul><li><strong>AppIncident</strong>: 4</li><li><strong>NetworkIncident</strong>: 4</li><li><strong>SecurityIncident</strong>: 4</li></ul></div>
+    </section>
+    <h2>Processed Incidents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Title</th><th>Type</th><th>Severity</th>
+          <th>Assigned Team</th><th>ServiceNow</th><th>Jira</th><th>Azure Boards</th><th>Triage Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td><code>INC001</code></td>
+  <td>Database connection timeout on prod-db-01</td>
+  <td>NetworkIncident</td>
+  <td class="critical">critical</td>
+  <td>Network Operations</td>
+  <td>MOCK-SNOW-001</td>
+  <td>MOCK-JIRA-001</td>
+  <td>MOCK-AZURE-001</td>
+  <td>Paged on-call network team for INC001</td>
+</tr>
+<tr>
+  <td><code>INC004</code></td>
+  <td>Network switch offline in DC rack B</td>
+  <td>NetworkIncident</td>
+  <td class="critical">critical</td>
+  <td>Network Operations</td>
+  <td>MOCK-SNOW-002</td>
+  <td>MOCK-JIRA-002</td>
+  <td>MOCK-AZURE-002</td>
+  <td>Paged on-call network team for INC004</td>
+</tr>
+<tr>
+  <td><code>INC005</code></td>
+  <td>Ransomware signature detected on workstation</td>
+  <td>SecurityIncident</td>
+  <td class="critical">critical</td>
+  <td>Security Operations</td>
+  <td>MOCK-SNOW-003</td>
+  <td>MOCK-JIRA-003</td>
+  <td>MOCK-AZURE-003</td>
+  <td>SOC alert sent for INC005</td>
+</tr>
+<tr>
+  <td><code>INC002</code></td>
+  <td>Suspicious login attempts from unknown IP</td>
+  <td>SecurityIncident</td>
+  <td class="high">high</td>
+  <td>Security Operations</td>
+  <td>MOCK-SNOW-004</td>
+  <td>MOCK-JIRA-004</td>
+  <td>MOCK-AZURE-004</td>
+  <td>SOC alert sent for INC002</td>
+</tr>
+<tr>
+  <td><code>INC003</code></td>
+  <td>Checkout service returning NullPointerException</td>
+  <td>AppIncident</td>
+  <td class="high">high</td>
+  <td>Application Support</td>
+  <td>MOCK-SNOW-005</td>
+  <td>MOCK-JIRA-005</td>
+  <td>MOCK-AZURE-005</td>
+  <td>Stack trace snippet for INC003: Checkout service is failing for users and stack trace shows a NullPointerException in CartController.</td>
+</tr>
+<tr>
+  <td><code>INC006</code></td>
+  <td>Payment gateway timeout - Stripe API 503</td>
+  <td>AppIncident</td>
+  <td class="high">high</td>
+  <td>Application Support</td>
+  <td>MOCK-SNOW-006</td>
+  <td>MOCK-JIRA-006</td>
+  <td>MOCK-AZURE-006</td>
+  <td>Stack trace snippet for INC006: Stripe API is returning HTTP-503 and payment requests are timing out.</td>
+</tr>
+<tr>
+  <td><code>INC007</code></td>
+  <td>Intermittent packet loss on VLAN 30</td>
+  <td>NetworkIncident</td>
+  <td class="medium">medium</td>
+  <td>Network Operations</td>
+  <td>MOCK-SNOW-007</td>
+  <td>MOCK-JIRA-007</td>
+  <td>MOCK-AZURE-007</td>
+  <td>Paged on-call network team for INC007</td>
+</tr>
+<tr>
+  <td><code>INC008</code></td>
+  <td>Phishing email reported by 3 employees</td>
+  <td>SecurityIncident</td>
+  <td class="medium">medium</td>
+  <td>Security Operations</td>
+  <td>MOCK-SNOW-008</td>
+  <td>MOCK-JIRA-008</td>
+  <td>MOCK-AZURE-008</td>
+  <td>SOC alert sent for INC008</td>
+</tr>
+<tr>
+  <td><code>INC009</code></td>
+  <td>API response slow - P95 latency 4.2s</td>
+  <td>AppIncident</td>
+  <td class="medium">medium</td>
+  <td>Application Support</td>
+  <td>MOCK-SNOW-009</td>
+  <td>MOCK-JIRA-009</td>
+  <td>MOCK-AZURE-009</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td><code>INC012</code></td>
+  <td>DNS resolution intermittent on 10.2.0.0/16</td>
+  <td>NetworkIncident</td>
+  <td class="medium">medium</td>
+  <td>Network Operations</td>
+  <td>MOCK-SNOW-010</td>
+  <td>MOCK-JIRA-010</td>
+  <td>MOCK-AZURE-010</td>
+  <td>Paged on-call network team for INC012</td>
+</tr>
+<tr>
+  <td><code>INC010</code></td>
+  <td>Scheduled job failed - non-production env</td>
+  <td>AppIncident</td>
+  <td class="low">low</td>
+  <td>Application Support</td>
+  <td>MOCK-SNOW-011</td>
+  <td>MOCK-JIRA-011</td>
+  <td>MOCK-AZURE-011</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td><code>INC011</code></td>
+  <td>Minor firewall rule misconfiguration found</td>
+  <td>SecurityIncident</td>
+  <td class="low">low</td>
+  <td>Security Operations</td>
+  <td>MOCK-SNOW-012</td>
+  <td>MOCK-JIRA-012</td>
+  <td>MOCK-AZURE-012</td>
+  <td>SOC alert sent for INC011</td>
+</tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

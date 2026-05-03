@@ -1,0 +1,238 @@
+[
+  {
+    "id": "INC001",
+    "title": "Database connection timeout on prod-db-01",
+    "description": "Production database host prod-db-01 is unreachable and application connections are timing out.",
+    "reported_by": "app.support@example.com",
+    "timestamp": "2026-04-28T09:15:00+00:00",
+    "assigned_team": "Network Operations",
+    "severity": "critical",
+    "incident_type": "NetworkIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-001",
+      "jira": "MOCK-JIRA-001",
+      "azure": "MOCK-AZURE-001"
+    },
+    "triage_notes": [
+      "Paged on-call network team for INC001"
+    ],
+    "affected_host": "connection timeout",
+    "protocol": "unknown"
+  },
+  {
+    "id": "INC004",
+    "title": "Network switch offline in DC rack B",
+    "description": "Core switch in rack B is down and several servers lost TCP connectivity.",
+    "reported_by": "noc@example.com",
+    "timestamp": "2026-04-28T10:05:00+00:00",
+    "assigned_team": "Network Operations",
+    "severity": "critical",
+    "incident_type": "NetworkIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-002",
+      "jira": "MOCK-JIRA-002",
+      "azure": "MOCK-AZURE-002"
+    },
+    "triage_notes": [
+      "Paged on-call network team for INC004"
+    ],
+    "affected_host": "switch",
+    "protocol": "TCP"
+  },
+  {
+    "id": "INC005",
+    "title": "Ransomware signature detected on workstation",
+    "description": "Endpoint protection detected ransomware behavior on a finance workstation.",
+    "reported_by": "endpoint@example.com",
+    "timestamp": "2026-04-28T10:20:00+00:00",
+    "assigned_team": "Security Operations",
+    "severity": "critical",
+    "incident_type": "SecurityIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-003",
+      "jira": "MOCK-JIRA-003",
+      "azure": "MOCK-AZURE-003"
+    },
+    "triage_notes": [
+      "SOC alert sent for INC005"
+    ],
+    "threat_type": "Ransomware",
+    "source_ip": "unknown"
+  },
+  {
+    "id": "INC002",
+    "title": "Suspicious login attempts from unknown IP",
+    "description": "Multiple suspicious login attempts were detected from 203.0.113.44 against the VPN portal.",
+    "reported_by": "soc@example.com",
+    "timestamp": "2026-04-28T09:25:00+00:00",
+    "assigned_team": "Security Operations",
+    "severity": "high",
+    "incident_type": "SecurityIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-004",
+      "jira": "MOCK-JIRA-004",
+      "azure": "MOCK-AZURE-004"
+    },
+    "triage_notes": [
+      "SOC alert sent for INC002"
+    ],
+    "threat_type": "Suspicious login",
+    "source_ip": "203.0.113.44"
+  },
+  {
+    "id": "INC003",
+    "title": "Checkout service returning NullPointerException",
+    "description": "Checkout service is failing for users and stack trace shows a NullPointerException in CartController.",
+    "reported_by": "qa@example.com",
+    "timestamp": "2026-04-28T09:40:00+00:00",
+    "assigned_team": "Application Support",
+    "severity": "high",
+    "incident_type": "AppIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-005",
+      "jira": "MOCK-JIRA-005",
+      "azure": "MOCK-AZURE-005"
+    },
+    "triage_notes": [
+      "Stack trace snippet for INC003: Checkout service is failing for users and stack trace shows a NullPointerException in CartController."
+    ],
+    "app_name": "checkout-service",
+    "error_code": "service returning"
+  },
+  {
+    "id": "INC006",
+    "title": "Payment gateway timeout - Stripe API 503",
+    "description": "Stripe API is returning HTTP-503 and payment requests are timing out.",
+    "reported_by": "payments@example.com",
+    "timestamp": "2026-04-28T10:45:00+00:00",
+    "assigned_team": "Application Support",
+    "severity": "high",
+    "incident_type": "AppIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-006",
+      "jira": "MOCK-JIRA-006",
+      "azure": "MOCK-AZURE-006"
+    },
+    "triage_notes": [
+      "Stack trace snippet for INC006: Stripe API is returning HTTP-503 and payment requests are timing out."
+    ],
+    "app_name": "payment-gateway",
+    "error_code": "API"
+  },
+  {
+    "id": "INC007",
+    "title": "Intermittent packet loss on VLAN 30",
+    "description": "Users in VLAN 30 report intermittent packet loss over UDP traffic.",
+    "reported_by": "helpdesk@example.com",
+    "timestamp": "2026-04-28T11:00:00+00:00",
+    "assigned_team": "Network Operations",
+    "severity": "medium",
+    "incident_type": "NetworkIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-007",
+      "jira": "MOCK-JIRA-007",
+      "azure": "MOCK-AZURE-007"
+    },
+    "triage_notes": [
+      "Paged on-call network team for INC007"
+    ],
+    "affected_host": "packet loss",
+    "protocol": "UDP"
+  },
+  {
+    "id": "INC008",
+    "title": "Phishing email reported by 3 employees",
+    "description": "Employees reported a phishing email with a suspicious password reset link.",
+    "reported_by": "hr@example.com",
+    "timestamp": "2026-04-28T11:15:00+00:00",
+    "assigned_team": "Security Operations",
+    "severity": "medium",
+    "incident_type": "SecurityIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-008",
+      "jira": "MOCK-JIRA-008",
+      "azure": "MOCK-AZURE-008"
+    },
+    "triage_notes": [
+      "SOC alert sent for INC008"
+    ],
+    "threat_type": "Phishing",
+    "source_ip": "unknown"
+  },
+  {
+    "id": "INC009",
+    "title": "API response slow - P95 latency 4.2s",
+    "description": "Customer profile API latency is degraded and response times are slow.",
+    "reported_by": "observability@example.com",
+    "timestamp": "2026-04-28T11:40:00+00:00",
+    "assigned_team": "Application Support",
+    "severity": "medium",
+    "incident_type": "AppIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-009",
+      "jira": "MOCK-JIRA-009",
+      "azure": "MOCK-AZURE-009"
+    },
+    "triage_notes": [],
+    "app_name": "api-service",
+    "error_code": "API"
+  },
+  {
+    "id": "INC012",
+    "title": "DNS resolution intermittent on 10.2.0.0/16",
+    "description": "DNS resolution is intermittent for internal services using subnet 10.2.0.0/16.",
+    "reported_by": "noc@example.com",
+    "timestamp": "2026-04-28T12:45:00+00:00",
+    "assigned_team": "Network Operations",
+    "severity": "medium",
+    "incident_type": "NetworkIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-010",
+      "jira": "MOCK-JIRA-010",
+      "azure": "MOCK-AZURE-010"
+    },
+    "triage_notes": [
+      "Paged on-call network team for INC012"
+    ],
+    "affected_host": "DNS",
+    "protocol": "unknown"
+  },
+  {
+    "id": "INC010",
+    "title": "Scheduled job failed - non-production env",
+    "description": "Nightly cleanup job failed in a non-production environment with no user impact.",
+    "reported_by": "devops@example.com",
+    "timestamp": "2026-04-28T12:00:00+00:00",
+    "assigned_team": "Application Support",
+    "severity": "low",
+    "incident_type": "AppIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-011",
+      "jira": "MOCK-JIRA-011",
+      "azure": "MOCK-AZURE-011"
+    },
+    "triage_notes": [],
+    "app_name": "scheduler",
+    "error_code": "Scheduled job"
+  },
+  {
+    "id": "INC011",
+    "title": "Minor firewall rule misconfiguration found",
+    "description": "A firewall rule misconfiguration was found during audit; no traffic is blocked.",
+    "reported_by": "audit@example.com",
+    "timestamp": "2026-04-28T12:20:00+00:00",
+    "assigned_team": "Security Operations",
+    "severity": "low",
+    "incident_type": "SecurityIncident",
+    "ticket_ids": {
+      "snow": "MOCK-SNOW-012",
+      "jira": "MOCK-JIRA-012",
+      "azure": "MOCK-AZURE-012"
+    },
+    "triage_notes": [
+      "SOC alert sent for INC011"
+    ],
+    "threat_type": "firewall rule",
+    "source_ip": "unknown"
+  }
+]
